@@ -22,7 +22,7 @@
       <br>
       <label id="dob">date of birth:</label>
       
-      <input  type="date" name="date">
+      <input   type="date" name="date">
       <button type="submit">submit</button>
    </form>
   </div>
@@ -61,6 +61,8 @@
     let firstName = document.getElementById("firstName")
     let btnSubmit = document.getElementById('submit')
     const frmBio = document.getElementById('frmBio');
+
+   
     
 
 
@@ -73,6 +75,13 @@
       console.log(frmData.get('firstName'));
       console.log(frmData.get('lastName'));
       console.log(frmData.get('date'));
+
+      const currentDate = new Date();
+      const dateOfBirth = new Date(frmData.get('date'));
+       const age = currentDate.getFullYear() - dateOfBirth.getFullYear();
+       console.log(age)
+      
+
       
       
      });
@@ -89,6 +98,7 @@
       console.log(frmData2.get('password'))
      })
 
+     
      
 
   </script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+  <title>js practice</title>
+</head>
+<body>
+  <p id="jina">nelson</p>
+  <h2>a game you know</h2>
+<header>
+  <h1>Quiz.js</h1>
+  <p id="know">do you know js?Find out!</p>
+</header>
+<main>
+  <div id="statement">
+
+  </div>
+  <div id="options">
+    <button name="true" value="true" disabled="true" >true</button>
+    <br>
+    <button name="false" value="false" >false</button>
+
+  </div>
+  <div id="explanation">
+
+  </div>
+</main>
+  
+
+
+
+  <script>
+    // document.getElementById('jina').textContent
+    //document.querySelector('h2').textContent
+    //document.title = "my page"
+   
+   //document.getElementById('jina').textContent = "nelson"
+   
+    //document.title = 'soccer'
+   // document.getElementById('jina').append('  oyugi')
+   //let name = "nelson";
+   //let age = 70 + 73;
+   //console.log(name)
+   //console.log(age)
+
+   //let jina = document.getElementById('jina')
+   //console.log(jina)
+
+   //let scrub = " guy that thinks he is a fly";
+   // let busta = scrub;
+   // scrub = " guy that cant get no love form me"
+   // console.log(scrub)
+
+   //const operands = [4,6];
+   // const sum = operands[0] + operands[1]
+   //console.log(sum)
+   
+  
+   /* const js = {
+    name:"javascript",
+    birth:1995,
+   }
+   console.log(js)
+   nlet age = 2024 - js.birth;
+   nconsole.log(age)
+   n*/
+
+   const nelson = {
+    name:"nelson;",
+    home:"kenya",
+    birth:1992,
+    currentResidence:"united states",
+    langueges:["english","kisii","kiswahili","kikuyu"]
+   }
+   console.log(nelson)
+
+   let age = 2024 - nelson.birth;
+   console.log(age)
+   const dog = {
+    name: 'simba',
+    breed:'dog',
+    speak: function (){
+      console.log("woof woof");
+    }
+   }
+   console.log(dog)
+   dog.speak();
+  
+   const spices = [
+    {name:'emma', nickname:'Baby'},
+    {name:'Geri', nickname:'Ginger'},
+    {name:'mel B', nickname: 'scary'},
+    {name:'mel c', nickname: 'sporty'},
+    {name:'victoria', nickname: 'posh'},
+   ]
+
+   const spiceGirls = {
+    albums:['spice', 'spiceworld', ' Forever'],
+    motto: 'Girl power',
+    members:spices
+   };
+    console.log(spiceGirls.motto)
+   console.log(spiceGirls.albums[1])
+   console.log(spiceGirls.members[4])
+   
+
+   const statement = document.getElementById('statement')
+
+   const optionButtons = document.querySelector("#options").children;
+   
+   const explanation = document.getElementById('explanation')
+
+   const fact = {
+    statement:"'1'+'1' === '2'",
+    answer:" arrays are like objects "
+   };
+    statement.textContent = fact.statement
+
+   const button = document.getElementsByName('true')
+
+   const disabled = (button) => {
+    button.setAttribute("disabled", "");
+   }
+   disabled(optionButtons[0])
+
+   const enable = (button) => button.removeAttribute('disabled', "");
+   enable(optionButtons[0])
+
+   let trueButton = optionButtons[0]
+   trueButton.addEventListener('click',(event) => {
+   trueButton.textContent = trueButton.textContent.toUpperCase()
+
+   })
+   for( let button of optionButtons){
+    button.addEventListener('click', (event)  => {
+     console.log('iko sawa')
+    })
+   }
+   explanation.textContent = fact.explanation;
+   
+   
+  
+  
+</script>
+ </body>
+ </html>
+  
+   

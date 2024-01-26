@@ -1,0 +1,24 @@
+.m-pesa{
+  display: flex;
+  margin: auto; 
+  width: 50%;
+  margin-top: 50px;
+  
+  
+}
+.withdraw{
+  padding: 12px;
+  margin-left: 20px;
+  box-shadow: 4px 4px 4px 4px rgb(230, 231, 233);
+}
+button{
+  background-color: darkgreen;
+  color: white;
+}
+.deposit{
+  padding: 12px;
+  
+  box-shadow: 4px 4px 4px 4px rgb(230, 231, 233);
+}
+button{
+}

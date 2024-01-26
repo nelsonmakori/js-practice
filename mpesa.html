@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mpesa.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#" id="frm-deposit">
+    <input type="number" name="amount">
+    <br>
+    <button type="submit" name="btn-submit">deposit</button>
+  </form>
+  
+  <script>
+    const frmDeposit = document.getElementById('frm-deposit')
+    /*frmDeposit.onsubmit((data)=> {
+      console.log(data)
+
+    });
+    */
+    frmDeposit.addEventListener("submit",(data) =>{
+      data.preventDefault()
+      console.log(data)
+      const formData = new FormData(data.target)
+      console.log(formData)
+      console.log(formData.get("amount"))
+
+      
+    })
+
+
+function result(){
+  let balance =700;
+  let withdraw = 50;
+  let deposit = 615;
+  let result = deposit + balance;
+  let balanceAfterWithdraw = balance - withdraw;
+  if(balance < 1){
+    console.log(` your balance is ${balance} dollars`)
+  }else{
+    console.log(`your balance is ${balance}`)
+  }
+    
+  if(deposit || balance){
+    console.log(`you deposited ${result}`)
+  }
+  if(balance || withdraw ){
+    console.log(`you withdrawed ${withdraw} and your remaining is ${balanceAfterWithdraw}`)
+
+  }
+  }
+
+result()
+
+setTimeout(() => console.log('good morning'),3000);
+
+
+
+
+  </script>
+</body>
+</html>

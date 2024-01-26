@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+  <div>
+    <form  id="frmBio" action="#" method="post">
+      <label for="display">firstName :</label>
+     <input id="display" type="text" name="firstName">
+     
+     
+     <br>
+     <br>
+      <label id="lastName"> lastname :</label>
+    
+      <input type="text" name="lastName">
+      <br>
+      <label id="dob">date of birth:</label>
+      
+      <input  type="date" name="date">
+      <button type="submit">submit</button>
+   </form>
+  </div>
+  <br>
+  <br>
+      
+
+     <div>
+      <form id="frmTwo">
+        <label for="country">country of origin :</label>
+        <input type="text" name="country">
+        <br>
+        <br>
+        <label for="residence">current residence:</label>
+      
+        <input type="text" name="residence">
+        <br>
+        <label for="state">state:</label>
+        <input type="text" name="state">
+        <br>
+        <label for="password">password:</label>
+        <input id="passWord" type="password" placeholder="enter your passowrd" maxlength="8" name="password">
+        <br>
+        <button type="submit">submit</button>
+       
+
+        
+       </form>
+     </div>
+       
+        
+    
+  
+  <script>
+    let inputs = document.getElementById('display')
+    let firstName = document.getElementById("firstName")
+    let btnSubmit = document.getElementById('submit')
+    const frmBio = document.getElementById('frmBio');
+    
+
+
+    
+     frmBio.addEventListener('submit',(data) => {
+      data.preventDefault();
+      console.log(data)
+
+      const frmData = new FormData(data.target);
+      console.log(frmData.get('firstName'));
+      console.log(frmData.get('lastName'));
+      console.log(frmData.get('date'));
+      
+      
+     });
+
+     const frmTwo = document.getElementById('frmTwo');
+     frmTwo.addEventListener('submit',(e) =>{
+      e.preventDefault()
+      console.log(e)
+
+      const frmData2 = new FormData(e.target);
+      console.log(frmData2.get('state'))
+      console.log(frmData2.get('country'))
+      console.log(frmData2.get('residence'))
+      console.log(frmData2.get('password'))
+     })
+
+     
+
+  </script>
+</body>
+</html>

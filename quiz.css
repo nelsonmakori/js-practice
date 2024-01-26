@@ -1,0 +1,25 @@
+#options{
+  margin-left: 30%;
+} 
+button{
+  background-color: aliceblue;
+  width: 50%;
+  cursor: pointer;
+  
+}
+#know{
+  margin-left: 30%;
+}
+h1{
+  margin-left: 30%;
+}
+#statement{
+ height:50px ;
+ width: 34.6%;
+ border: 1px solid black;
+ margin-left: 30%;
+ margin-bottom: 10px;
+ border-radius: 10px;
+ box-shadow: rgb(91, 85, 85) 2px 2px;
+
+}

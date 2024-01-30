@@ -47,12 +47,19 @@
         <input id="passWord" type="password" placeholder="enter your passowrd" maxlength="8" name="password">
         <br>
         <button type="submit">submit</button>
+        
        
 
         
        </form>
      </div>
-       
+
+     <button id="button">click me</button>
+       <p id="hapo">hapo sawa</p>
+       <input type="text" placeholder="fill here" class="input">
+       <p class="paragraph">nothing has typed yet</p>
+       <p class="box" style="width: 100px; height: 100px; background-color: aqua;" ></p>
+       <input type="text" class="change-Color">
         
     
   
@@ -98,9 +105,27 @@
       console.log(frmData2.get('password'))
      })
 
-     
-     
+     const button = document.getElementById('button');
+     button.addEventListener('click',function(){
+      console.log('hapo sawa')
+     })
+    
+    
 
-  </script>
+     const hapo = document.getElementById('hapo')
+      hapo.style.color = 'blue'
+      hapo.innerText = 'ashanti'
+
+      const input = document.querySelector('.input');
+      const paragraph = document.querySelector('.paragraph')
+
+    input.addEventListener('keyup',function() {
+      paragraph.innerText = input.value
+    })
+
+    const paragraph2 = document.querySelector(".box");
+
+    
+    </script>
 </body>
 </html>
